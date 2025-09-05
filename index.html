@@ -164,6 +164,25 @@
         <header>
           <h2 class="h2 article-title">Resume</h2>
         </header>
+        
+        <!-- Resume Card -->
+        <div class="resume-card">
+          <div class="resume-card-content">
+            <div class="resume-icon">
+              <ion-icon name="document-text"></ion-icon>
+            </div>
+            <h3 class="resume-card-title">Curriculum Vitae</h3>
+            <p class="resume-card-description">View my complete professional background, skills, and experiences.</p>
+            <a href="./assets/images/JAIRO_PONCE_CV.pdf" target="_blank" class="resume-download-btn">
+              <span class="btn-text">Open CV</span>
+              <div class="btn-icon">
+                <ion-icon name="document-text-outline"></ion-icon>
+                <ion-icon class="hover-icon" name="open-outline"></ion-icon>
+              </div>
+            </a>
+          </div>
+        </div>
+
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
@@ -277,18 +296,15 @@
               <button class="active" data-filter-btn>All</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button data-filter-btn>WEB APPLICATION</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
+              <button data-filter-btn>BOARD DESIGN</button>
             </li>
           </ul>
           <div class="filter-select-box">
             <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-select-value>Select category</div>
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
@@ -298,132 +314,351 @@
                 <button data-select-item>All</button>
               </li>
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>WEB APPLICATION</button>
               </li>
               <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>BOARD DESIGN</button>
               </li>
             </ul>
           </div>
           <ul class="project-list">
-            <li class="project-item  active" data-filter-item data-category="web development"
+            <!-- Project Card Template for Responsive, Presentable Preview -->
+            <template id="project-card-template">
+              <li class="project-item active" data-filter-item data-category="WEB APPLICATION"
+                  data-project-image=""
+                  data-project-title=""
+                  data-project-description=""
+                  data-project-technical=""
+                  data-project-gallery="">
+                <a href="#" class="project-card-link">
+                  <figure class="project-img">
+                    <img src="" alt="" loading="lazy" class="project-preview-img">
+                  </figure>
+                  <div class="project-card-content">
+                    <h3 class="project-title"></h3>
+                    <p class="project-category">WEB APPLICATION</p>
+                  </div>
+                </a>
+              </li>
+            </template>
+            <!-- Existing project items below (unchanged) -->
+            <li class="project-item  active" data-filter-item data-category="WEB APPLICATION"
                 data-project-image="./assets/images/controls.png"
                 data-project-title="Web Dashboard for Real-Time Industrial Control"
-                data-project-description="A responsive dashboard for industrial control with real-time feedback and live monitoring, integrating SCADA features for plant operators.">
+                data-project-description="A comprehensive web-based control system that revolutionizes industrial operations through real-time monitoring and control capabilities. This dashboard serves as a central command center for plant operators, providing instant visibility into critical processes and enabling responsive decision-making. The system features intuitive controls, real-time data visualization, and advanced SCADA integration, making it an essential tool for modern industrial management."
+                data-project-technical="Technologies & Features:
+• Frontend: HTML5, CSS3, JavaScript (ES6+), Chart.js for real-time graphs
+• Backend: Node.js with Express, WebSocket for live data streaming
+• Database: MySQL for historical data logging
+• Communication: Modbus TCP/IP protocol for device integration
+• Key Features:
+  - Real-time process visualization with <1s refresh rate
+  - Interactive control panels for equipment operation
+  - Historical data trending and analysis
+  - Role-based access control
+  - Mobile-responsive design
+  - Alarm management system
+• Integration with multiple industrial protocols (Modbus, RS485)
+• Automated data logging and report generation"
+                data-project-gallery="./assets/images/sr.png,./assets/images/sd.png">
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/controls.png" alt="finance" loading="lazy">
                 </figure>
                 <h3 class="project-title">Web Dashboard for Real-Time Industrial Control</h3>
                 <p class="project-category">Web development</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="web development"
+            <li class="project-item  active" data-filter-item data-category="WEB APPLICATION"
                 data-project-image="./assets/images/usfi_monitoring.png"
                 data-project-title="Web-Based SCADA for Industrial Data Visualization"
-                data-project-description="A web-based SCADA system for live visualization of industrial data and equipment status, with customizable dashboards and device controls.">
+                data-project-description="An advanced browser-based SCADA system specifically designed for feed mill production monitoring and control. This comprehensive platform transforms complex industrial data into actionable insights through intuitive visualizations and real-time monitoring capabilities. The system provides a unified interface for managing diverse production processes, from raw material handling to finished product storage, enabling efficient operation management and quick decision-making."
+                data-project-technical="Technical Implementation:
+• Architecture: Microservices-based design with distributed processing
+• Frontend Stack:
+  - Vue.js framework for dynamic UI components
+  - SVG animations for equipment state visualization
+  - WebSocket integration for real-time updates
+• Backend Infrastructure:
+  - Node.js server with Express.js
+  - Redis for real-time data caching
+  - PostgreSQL for time-series data storage
+• Industrial Integration:
+  - Multi-protocol support (Modbus TCP/RTU, RS485)
+  - OPC UA compatibility for device interoperability
+  - Custom protocol adapters for legacy equipment
+• Advanced Features:
+  - Automated data acquisition from field devices
+  - Real-time trend analysis and reporting
+  - Configurable alarm thresholds and notifications
+  - User authentication and role-based access
+  - Automated backup and data archiving"
+                data-project-gallery="./assets/images/general_monitoring_office.cf.png,./assets/images/silo_display_new.cf.png">
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                 
                   <img src="./assets/images/usfi_monitoring.png" alt="orizon" loading="lazy">
                 </figure>
                 <h3 class="project-title">Web-Based SCADA for Industrial Data Visualization</h3>
                 <p class="project-category">Web development</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="web design"
+            <li class="project-item  active" data-filter-item data-category="WEB APPLICATION"
                 data-project-image="./assets/images/ncc.png"
                 data-project-title="Hybrid SCADA System for Smart Monitoring and Ampere-Based Dispensing Control"
-                data-project-description="Hybrid SCADA: Web UI + embedded hardware for real-time monitoring, ampere-based control of dispensing machines, and operator alerts.">
+                data-project-description="An innovative hybrid SCADA solution that combines web-based monitoring with embedded hardware control for precise dispensing operations. This system revolutionizes material handling by implementing ampere-based monitoring for accurate dispensing control, ensuring optimal material flow and reducing waste. The integration of real-time alerts and monitoring capabilities enables proactive maintenance and immediate response to operational anomalies."
+                data-project-technical="System Architecture & Components:
+• Hardware Integration:
+  - ESP32 microcontrollers for distributed control
+  - Current sensors for ampere monitoring
+  - Industrial-grade relays for equipment control
+  - Custom PCB design for interface connections
+• Software Stack:
+  - React.js frontend with Material-UI components
+  - Node.js backend with Express
+  - MQTT protocol for device communication
+  - InfluxDB for time-series data storage
+• Control Features:
+  - Real-time ampere monitoring with 0.1A precision
+  - Automatic calibration system
+  - PID control for dispensing accuracy
+  - Dynamic threshold adjustment
+• Safety & Monitoring:
+  - Multi-level alarm system
+  - Automatic shutdown protection
+  - Error logging and diagnostics
+  - Remote monitoring capabilities
+• Data Management:
+  - Historical trend analysis
+  - Performance reporting
+  - Calibration data logging
+  - Configuration backup/restore"
+                data-project-gallery="./assets/images/ncc_control_v2.cf.png">
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                   <img src="./assets/images/ncc.png" alt="fundo" loading="lazy">
                 </figure>
                 <h3 class="project-title">Hybrid SCADA System for Smart Monitoring and Ampere-Based Dispensing Control</h3>
-                <p class="project-category">Web design</p>
+                <p class="project-category">WEB APPLICATION</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="applications"
+            <li class="project-item  active" data-filter-item data-category="WEB APPLICATION"
                 data-project-image="./assets/images/silotemp.png"
                 data-project-title="Web-Based Silo Temperature Monitoring"
-                data-project-description="Monitors silo temperatures in real-time with web dashboard, data logging, and user-configurable thresholds for industrial safety.">
+                data-project-description="A sophisticated temperature monitoring system designed specifically for industrial silos, providing critical environmental control for stored materials. This web-based solution delivers real-time temperature tracking across multiple silo locations, with advanced analytics and predictive maintenance capabilities. The system ensures product quality and safety through continuous monitoring and intelligent alerting mechanisms."
+                data-project-technical="Implementation Details:
+• Sensor Network:
+  - DS18B20 digital temperature sensors
+  - Custom sensor arrays for vertical profiling
+  - Redundant sensor deployment for reliability
+• Hardware Platform:
+  - ESP32 controllers with built-in WiFi
+  - RS485 network for long-distance communication
+  - Industrial-grade power supply system
+• Software Components:
+  - React.js frontend with D3.js visualizations
+  - FastAPI backend for high-performance data handling
+  - TimescaleDB for temperature data storage
+• Monitoring Features:
+  - Real-time temperature mapping
+  - Configurable alert thresholds
+  - Temperature trend analysis
+  - Automated reporting system
+• Safety Features:
+  - Multi-level alarm system
+  - SMS/Email notifications
+  - Automatic data backup
+  - Fail-safe monitoring
+• Analysis Tools:
+  - Historical data analysis
+  - Temperature gradient visualization
+  - Custom report generation
+  - Data export capabilities"
+                data-project-gallery="./assets/images/silo_temp.png">
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
                   <img src="./assets/images/silotemp.png" alt="brawlhalla" loading="lazy">
                 </figure>
                 <h3 class="project-title">Web-Based Silo Temperature Monitoring</h3>
                 <p class="project-category">Applications</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="web design"
+            <li class="project-item  active" data-filter-item data-category="WEB APPLICATION"
                 data-project-image="./assets/images/rs485manager.png"
-                data-project-title="Web-Based Device Settings Manager with Auto Programming Templates"
-                data-project-description="A device manager web app for configuring RS485 devices, supporting auto-programming templates and device discovery.">
+                data-project-title="Web-Based VFD/SOFTSTARTER/POWERMETER/SERVO DRIVE Parameters Manager"
+                data-project-description="A comprehensive device management platform designed to streamline the configuration and monitoring of industrial RS485 devices. This web-based solution simplifies the complex task of managing multiple device parameters through an intuitive interface, featuring automatic device discovery and template-based programming. The system supports various industrial devices including VFDs, soft starters, power meters, and servo drives, making it an essential tool for industrial automation maintenance."
+                data-project-technical="Core Technologies & Features:
+• Communication Protocol:
+  - RS485 serial communication
+  - Modbus RTU/TCP implementation
+  - Custom protocol adaptors
+• Device Support:
+  - Variable Frequency Drives (VFDs)
+  - Soft Starters
+  - Power Meters
+  - Servo Drive Systems
+• Software Architecture:
+  - Angular frontend for robust UI
+  - Python backend with FastAPI
+  - SQLite for configuration storage
+  - WebSocket for real-time updates
+• Key Features:
+  - Auto device discovery and identification
+  - Parameter template management
+  - Bulk configuration deployment
+  - Real-time parameter monitoring
+  - Configuration backup/restore
+• Management Tools:
+  - Device grouping and organization
+  - Parameter comparison tools
+  - Configuration versioning
+  - Audit logging
+• Security:
+  - Role-based access control
+  - Encrypted communication
+  - Action logging and tracking"
+                data-project-gallery="./assets/images/ServoDrive_Device_Manager.png,./assets/images/VFD_Device_Manager.png">
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                 
                   <img src="./assets/images/rs485manager.png" alt="dsm." loading="lazy">
                 </figure>
                 <h3 class="project-title">Web-Based Device Settings Manager with Auto Programming Templates</h3>
-                <p class="project-category">Web design</p>
+                <p class="project-category">WEB APPLICATION</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="web design"
+            <li class="project-item  active" data-filter-item data-category="WEB APPLICATION"
                 data-project-image="./assets/images/powermeters.png"
                 data-project-title="Web-Based Real-Time Power Meter Dashboard"
-                data-project-description="Live power meter dashboard for industrial plants, with graph visualization, report exports, and alerting.">
+                data-project-description="A sophisticated power monitoring solution that provides real-time visibility into industrial plant energy consumption. This comprehensive dashboard enables facility managers to track power usage patterns, identify efficiency opportunities, and maintain optimal energy consumption levels. The system features advanced visualization tools, automated reporting capabilities, and intelligent alerting mechanisms for proactive power management."
+                data-project-technical="Technical Specifications:
+• Monitoring Capabilities:
+  - Real-time power consumption tracking
+  - Power factor analysis
+  - Voltage/current monitoring
+  - Harmonic analysis
+• Data Collection:
+  - Multiple power meter integration
+  - High-speed data sampling
+  - Automated data aggregation
+  - Custom polling intervals
+• Visualization Features:
+  - Real-time power graphs
+  - Interactive dashboards
+  - Customizable chart layouts
+  - Multi-meter comparison
+• Backend Infrastructure:
+  - Node.js server platform
+  - InfluxDB for time-series data
+  - Redis for real-time caching
+  - REST API for data access
+• Reporting System:
+  - Automated report generation
+  - Custom report templates
+  - PDF/Excel export options
+  - Scheduled report delivery
+• Alert Management:
+  - Threshold-based alerts
+  - Power factor warnings
+  - Email/SMS notifications
+  - Alert history tracking"
+                data-project-gallery="./assets/images/Current_Weight_Monitoring.png">
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                 
                   <img src="./assets/images/powermeters.png" alt="metaspark" loading="lazy">
                 </figure>
                 <h3 class="project-title">Web-Based Real-Time Power Meter Dashboard</h3>
-                <p class="project-category">Web design</p>
+                <p class="project-category">WEB APPLICATION</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="web development"
+            <li class="project-item  active" data-filter-item data-category="BOARD DESIGN"
                 data-project-image="./assets/images/boards.png"
                 data-project-title="PCB Design and Development Using EasyEDA"
-                data-project-description="Custom PCB designs for automation hardware, made with EasyEDA, supporting modular control and sensor integration.">
+                data-project-description="Professional PCB design project focused on creating custom automation control boards using EasyEDA. These designs facilitate seamless integration of sensors, microcontrollers, and communication modules for industrial automation applications. The boards feature modular design principles, enabling flexible configuration and easy maintenance while maintaining robust industrial-grade reliability."
+                data-project-technical="Design & Development Specifications:
+• Design Tools:
+  - EasyEDA Professional Edition
+  - Auto-router optimization
+  - 3D visualization support
+  - DRC/ERC verification
+• Board Specifications:
+  - 4-layer PCB design
+  - Industrial-grade components
+  - EMI/EMC considerations
+  - Heat dissipation design
+• Key Features:
+  - Modular connector systems
+  - Power management circuits
+  - Protection circuitry
+  - Debug/programming headers
+• Component Selection:
+  - Industrial temperature range
+  - High reliability components
+  - Surge protection devices
+  - Precision components
+• Manufacturing:
+  - JLCPCB fabrication
+  - Lead-free process
+  - IPC compliance
+  - Testing procedures
+• Documentation:
+  - Detailed schematics
+  - Assembly drawings
+  - BOM management
+  - Test procedures" 
+              data-project-gallery="./assets/images/boards.png,./assets/images/lidar.png,./assets/images/rs232.png,./assets/images/rs485.png,./assets/images/controlboard.png">
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
+                 
                   <img src="./assets/images/boards.png" alt="summary" loading="lazy">
                 </figure>
                 <h3 class="project-title">PCB Design and Development Using EasyEDA</h3>
-                <p class="project-category">Web development</p>
+                <p class="project-category">BOARD DESIGN</p>
               </a>
             </li>
-            <li class="project-item  active" data-filter-item data-category="applications"
+            <li class="project-item  active" data-filter-item data-category="WEB APPLICATION"
                 data-project-image="./assets/images/elecgraph.png"
                 data-project-title="Real-Time Ampere Monitoring with Live Graph Visualization"
-                data-project-description="Displays electrical current in real time, with live graphing and alerting for industrial plant maintenance.">
+                data-project-description="A sophisticated real-time monitoring system designed to track and visualize electrical current consumption in industrial environments. This application provides instantaneous ampere readings with dynamic graph visualization, enabling maintenance teams to monitor equipment performance and identify potential issues before they become critical. The system includes comprehensive alerting capabilities and historical data analysis tools for preventive maintenance."
+                data-project-technical="System Components & Features:
+                • Monitoring Hardware:
+                  - High-precision current sensors
+                  - Signal conditioning circuits
+                  - Data acquisition modules
+                  - ESP32 microcontroller integration
+                • Visualization System:
+                  - Real-time graphing engine
+                  - Dynamic chart scaling
+                  - Multi-channel monitoring
+                  - Custom view layouts
+                • Data Processing:
+                  - 100ms sampling rate
+                  - Rolling data buffer
+                  - Trend analysis
+                  - Anomaly detection
+                • Frontend Technologies:
+                  - Chart.js for real-time graphs
+                  - WebSocket for live updates
+                  - Responsive design
+                  - Touch-friendly interface
+                • Alert System:
+                  - Configurable thresholds
+                  - Progressive alerting
+                  - SMS/Email notifications
+                  - Alert acknowledgment
+                • Analysis Tools:
+                  - Historical data review
+                  - Peak analysis
+                  - Usage patterns
+                  - Export capabilities" 
+            data-project-gallery="./assets/images/Current_Weight_Monitoring.png">
               <a href="#">
                 <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/elecgraph.png" alt="task manager" loading="lazy">
+                 
+                  <img src="./assets/images/elecgraph.png" alt="summary" loading="lazy">
                 </figure>
                 <h3 class="project-title">Real-Time Ampere Monitoring with Live Graph Visualization</h3>
-                <p class="project-category">Applications</p>
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="web development"
-                data-project-image="./assets/images/project-9.png"
-                data-project-title="Arrival"
-                data-project-description="A collaboration and arrival dashboard for team presence and shift management in manufacturing.">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box"><ion-icon name="eye-outline"></ion-icon></div>
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-                <h3 class="project-title">Arrival</h3>
-                <p class="project-category">Web development</p>
+                <p class="project-category">WEB APPLICATION</p>
               </a>
             </li>
           </ul>
@@ -438,26 +673,85 @@
         <section class="blog-posts">
           <ul class="blog-posts-list">
             <li class="blog-post-item">
-              <a href="#">
+              <a href="#" class="blog-post-link" data-blog-modal="post1">
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                  <img src="./assets/images/night-coding.png" alt="A Day and Night is Still Not Enough" loading="lazy">
                 </figure>
                 <div class="blog-content">
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
+                    <p class="blog-category">Life & Career</p>
                     <span class="dot"></span>
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2023-09-05">Sept 5, 2023</time>
                   </div>
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+                  <h3 class="h3 blog-item-title">A Day and Night is Still Not Enough</h3>
                   <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                    The journey of an embedded engineer who codes through sunrise and sunset, balancing industrial automation, freelancing, and mentoring the next generation.
                   </p>
                 </div>
               </a>
             </li>
-            <!-- ...other blog posts... -->
+
+            <li class="blog-post-item">
+              <a href="#" class="blog-post-link" data-blog-modal="post2">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/automation.jpg" alt="The Future of Industrial Automation" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Technology</p>
+                    <span class="dot"></span>
+                    <time datetime="2023-08-28">Aug 28, 2023</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">The Future of Industrial Automation</h3>
+                  <p class="blog-text">
+                    Exploring the convergence of IoT, machine learning, and industrial control systems in modern manufacturing.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#" class="blog-post-link" data-blog-modal="post3">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/mentorship.webp" alt="Guiding Tomorrow's Engineers" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Education</p>
+                    <span class="dot"></span>
+                    <time datetime="2023-08-15">Aug 15, 2023</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Guiding Tomorrow's Engineers</h3>
+                  <p class="blog-text">
+                    Reflections on mentoring students and the importance of practical experience in engineering education.
+                  </p>
+                </div>
+              </a>
+            </li>
           </ul>
         </section>
+
+        <!-- Blog Post Modal Template -->
+        <div class="blog-modal-container" data-blog-modal-container>
+          <div class="blog-modal-overlay" data-blog-overlay></div>
+          <section class="blog-modal themed-modal">
+            <button class="modal-close-btn" data-blog-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <div class="blog-modal-content">
+              <h2 class="blog-modal-title" data-blog-modal-title></h2>
+              <div class="blog-modal-meta">
+                <span class="blog-modal-category" data-blog-modal-category></span>
+                <span class="dot"></span>
+                <time class="blog-modal-date" data-blog-modal-date></time>
+              </div>
+              <figure class="blog-modal-img">
+                <img src="" alt="" data-blog-modal-img>
+              </figure>
+              <div class="blog-modal-text" data-blog-modal-text></div>
+            </div>
+          </section>
+        </div>
       </article>
 
       <article class="contact" data-page="contact">
@@ -491,22 +785,35 @@
   <!-- Project Modal -->
   <div class="modal-container" data-project-modal-container>
     <div class="overlay" data-project-overlay></div>
-    <section class="project-modal">
+    <section class="project-modal themed-modal">
       <button class="modal-close-btn" data-project-modal-close-btn>
         <ion-icon name="close-outline"></ion-icon>
       </button>
-      <div class="modal-img-wrapper">
-        <figure class="modal-avatar-box">
+      <div class="modal-content">
+        <h2 class="modal-title long-header" data-project-modal-title></h2>
+        <div class="modal-section">
+          <h3>Overview</h3>
+          <div data-project-modal-overview></div>
+        </div>
+        <div class="modal-section">
+          <h3>Technical Details</h3>
+          <div data-project-modal-technical></div>
+        </div>
+        <div class="modal-img-wrapper">
+        <figure class="modal-avatar-box large-preview">
           <img src="" alt="" data-project-modal-img>
         </figure>
       </div>
-      <div class="modal-content">
-        <h4 class="h3 modal-title" data-project-modal-title></h4>
-        <div data-project-modal-text></div>
+        <div class="modal-section">
+          <h3>Gallery</h3><br>
+          <div class="modal-gallery" data-project-modal-gallery>
+            <div class="gallery-images"></div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
